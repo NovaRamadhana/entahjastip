@@ -45,7 +45,7 @@
                         <h2 class="text-white mt-0">We've got what you need!</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Pesan apa yang anda inginkan semua tersedia, tidak ada di pilihan? kami bawakan!</p>
-                        <a class="btn btn-light btn-xl" href="<?php echo base_url('Request')?>">Request!</a>
+                        <a class="btn btn-light btn-xl" href="<?= base_url('Request') ?>">Request!</a>
                     </div>
                 </div>
             </div>
