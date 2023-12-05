@@ -7,16 +7,16 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Profil') ?>">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= base_url('Request') ?>">Requests</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Category</a>
                     <ul class="dropdown-menu">
                         <?php foreach($kategori as $data){ ?>
-                            <li><a class="dropdown-item" href="#"><?php echo $data->nama_kategori ?></a></li>
+                            <li><a class="dropdown-item" href="#"><?= $data->nama_kategori ?></a></li>
                         <?php } ?>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= base_url('Contact') ?>">Contact</a></li>
             </ul>
         </div>
     </div>

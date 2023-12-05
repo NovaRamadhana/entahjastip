@@ -1,6 +1,6 @@
 <?php
 
-class request_m extends CI_Model
+class RequestModel extends CI_Model
 {
     function __construct()
     {
@@ -20,23 +20,33 @@ class request_m extends CI_Model
         // SELECT * FROM mhs
     }
 
-    // function insert_tanaman($data)
-    // {
-    //     //$sql = "INSERT INTO mhs VALUES (?,?,?,?)";
-    //     //$this->db->query($sql, array($data['nrp'], $data['nama'], $data['jenis_kelamin'], $data['alamat']));
+    function insert_request($data)
+    {
+        //$sql = "INSERT INTO mhs VALUES (?,?,?,?)";
+        //$this->db->query($sql, array($data['nrp'], $data['nama'], $data['jenis_kelamin'], $data['alamat']));
 
-    //     $insert_data = array(
-    //         'kode' => $data['kode'],
-    //         'nama' => $data['nama'],
-    //         'kategori' => $data['kategori'],
-    //         'tanggal_tanam' => $data['tanggal_tanam'],
-    //         'ukuran' => $data['ukuran'],
-    //         'jenis_pupuk' => $data['jenis_pupuk']
-    //     );
+        $insert_data = array(
+            'id_request' => $data['id_request'],
+            'nama_produk' => $data['nama_produk'],
+            'deskripsi_produk' => $data['deskripsi_produk'],
+            'alamat_produk' => $data['alamat_produk'],
+            'link_produk' => $data['link_produk']
+        );
 
-    //     $this->db->insert('acaya_tanaman', $insert_data);
-    //     return $this->db->affected_rows();
-    // }
+        $this->db->insert('request_produk', $insert_data);
+        return $this->db->affected_rows();
+    }
+
+    function cekID($id){
+        $this->db->where('id_request', $id);
+        $query = $this->db->get('request_produk');
+
+        if ($query->num_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     // function get_one($kode)
     // {
