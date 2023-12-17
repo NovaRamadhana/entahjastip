@@ -6,7 +6,10 @@ class Dashboard extends CI_Controller{
         $this->load->model('Penjual/PenjualModel');
         $this->load->model('ProdukModel');
         $this->load->model('PesananModel');
+<<<<<<< HEAD
         $this->load->library('session');
+=======
+>>>>>>> 72b2bdac697103dc8c0d15379507f633cb78dab4
     }
 
     function index(){

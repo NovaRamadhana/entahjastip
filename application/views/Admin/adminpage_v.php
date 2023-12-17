@@ -246,7 +246,10 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+<<<<<<< HEAD
                         <h2>Selamat datang <?= $this->session->userdata('logged_in')['nama'] ?></h2>
+=======
+>>>>>>> 72b2bdac697103dc8c0d15379507f633cb78dab4
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
