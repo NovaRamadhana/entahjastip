@@ -9,6 +9,22 @@ class PenjualModel extends CI_Model{
         return $this->db->get_where('penjual', array('status_ajuan' => $status))->result();
     }
 
+    function getonePenjualDiterima($atribut, $data){
+        //$query = $this->db->get_where('penjual', array('id_user' => $id));
+
+        $query = $this->db  ->select('*')
+                            ->from('penjual')
+                            ->join('pengguna', 'pengguna.id_user = penjual.id_user')
+                            ->where('pengguna.'.$atribut, $data)
+                            ->where('penjual.status_ajuan', 'Diterima');
+
+        if ($query->affected_rows() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function updateAjuan($id, $status){
         $this->db->update('penjual', $status, array('id_penjual' => $id));
         return $this->db->affected_rows();
