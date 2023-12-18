@@ -17,12 +17,23 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Contact') ?>">Contact</a></li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
 		        <?php if(isset($userlogin)) { ?>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Login/logout') ?>">Logout</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Admin/Dashboard') ?>">Admin</a></li>
                 <?php } else { ?>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Login') ?>">Login</a></li>
                 <?php } ?>      
+<<<<<<< HEAD
+=======
+=======
+		        <li class="nav-item"><a class="nav-link" href="<?= base_url('Login') ?>">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?= base_url('Admin/Dashboard') ?>">Admin</a></li>
+>>>>>>> 72b2bdac697103dc8c0d15379507f633cb78dab4
+>>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
             </ul>
         </div>
     </div>
