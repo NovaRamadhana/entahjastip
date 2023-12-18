@@ -34,11 +34,11 @@ class DaftarPenjualPending extends CI_Controller{
 
     function terima($id){
         $data['status_ajuan'] = 'Diterima';
-        $result = this->PenjualModel->updateAjuan($id, $data);
+        $result = $this->PenjualModel->updateAjuan($id, $data);
         if($result > 0){
             $this->session->set_flashdata('msg', 
             '<div class="alert alert-success" role="alert">
-                Data '.$id.' berhasil terhapus
+                Pengajuan oleh '.$id.' berhasil diterima
             </div>');
         }
         else{
