@@ -7,10 +7,7 @@ class PenggunaModel extends CI_Model{
 
     function getOne($data){
         return $this->db    ->where('email', $data['email'])
-<<<<<<< HEAD
                             ->where('password', $data['password'])
-=======
->>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
                             ->get('pengguna');
     }
 

@@ -8,7 +8,6 @@ class PesananModel extends CI_Model{
     function countPesanan(){
         return $this->db->count_all('pesanan');
     }
-<<<<<<< HEAD
 
     function hitungPesanankePenjual($id){
         $query = $this->db  ->select('SUM(detail_pesanan.jumlah) as total_pesanan, SUM(detail_pesanan.jumlah*produk.harga) as pendapatan_kotor,')
@@ -27,6 +26,4 @@ class PesananModel extends CI_Model{
     function countPesananId($id){
         return $this->db->where('id_user', $id)->count_all_results('pesanan');
     }
-=======
->>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
 }

@@ -8,7 +8,6 @@ class ProdukModel extends CI_Model{
     function countProduk(){
         return $this->db->count_all('produk');
     }
-<<<<<<< HEAD
 
     function countProdukId($id){
         return $this->db->where('id_penjual', $id)->count_all_results('produk');
@@ -33,6 +32,4 @@ class ProdukModel extends CI_Model{
 
         return $query->row();
     }
-=======
->>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
 }

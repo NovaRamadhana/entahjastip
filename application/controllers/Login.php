@@ -26,15 +26,11 @@ class Login extends CI_Controller{
             $data = $this->input->post();
             if(!empty($data['email'])){
                 $result = $this->PenggunaModel->getOne($data);
-<<<<<<< HEAD
                 $isPenjual = $this->PenjualModel->cekonePenjualDiterima('email', $data['email']);
-=======
->>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
                 if ($result->num_rows() > 0){
                     $userData = [
                         'login' => true,
                         'user' => true,
-<<<<<<< HEAD
                         'penjual' => $isPenjual,
                         'id_user' => $result->row()->id_user,
                         'nama' => $result->row()->username,
@@ -45,12 +41,6 @@ class Login extends CI_Controller{
                         $userData['id_penjual'] = $dataPenjual->id_penjual;
                     }
 
-=======
-                        'penjual' => $this->PenjualModel->getonePenjualDiterima('email', $data['email']),
-                        'id_user' => $result->row()->id_user,
-                        'nama' => $result->row()->username,
-                    ];
->>>>>>> 9ab1435bfc82e79afb79a0e72a481f39f428c98c
                     $this->session->set_userdata('logged_in', $userData);
                     redirect(base_url());
                 } else {
