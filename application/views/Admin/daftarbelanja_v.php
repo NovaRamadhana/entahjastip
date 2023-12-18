@@ -243,7 +243,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Pengaju Akun Penjual</h1>
+                    <h1 class="h3 mb-2 text-gray-800"></h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
@@ -253,49 +253,57 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Daftar Akun Penjual</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr class="align-middle" >
-                                            <th>ID User</th>
+                                            <th>ID Produk</th>
+                                            <th>Stok</th>
                                             <th>ID Penjual</th>
-                                            <th>Nama Pemilik</th>
-                                            <th>Nama Toko</th>
-                                            <th>Action</th>
+                                            <th>Nama Produk</th>
+                                            <th>Harga</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID User</th>
+                                            <th>ID Produk</th>
+                                            <th>Stok</th>
                                             <th>ID Penjual</th>
-                                            <th>Nama Pemilik</th>
-                                            <th>Nama Toko</th>
-                                            <th>Action</th>
+                                            <th>Nama Produk</th>
+                                            <th>Harga</th>
+                                            <th>Deskripsi</th>
+                                            <th>Gambar</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($daftar_akun as $data){ ?>
+                                        <?php foreach ($produk as $data){ ?>
                                         <tr>
-                                            <td><?= $data->id_user ?></td>
-                                            <td><?= $data->id_penjual ?></td>
-                                            <td><?= $data->nama_pemilik ?></td>
-                                            <td><?= $data->nama_toko ?></td>
+                                            <td><?php echo $data->id_produk ?></td>
+                                            <td><?php echo $data->id_stok ?></td>
+                                            <td><?php echo $data->id_penjual ?></td>
+                                            <td><?php echo $data->nama_produk ?></td>
+                                            <td><?php echo $data->harga ?></td>
+                                            <td><?php echo $data->deskripsi ?></td>
+                                            <td><?php echo $data->img ?></td>
                                             <td class="" >
-                                                <a href="<?= base_url('Penjual/DaftarPenjualPending/terima/'.$data->id_penjual) ?>" class="btn btn-success btn-icon-split btn-sm">
+                                                <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_produk) ?>" class="btn btn-warning btn-icon-split btn-sm">
                                                     <span class="icon text-white-20">
-                                                        <i class="fas fa-check"></i>
+                                                        <i class="fas fa-edit"></i>
                                                     </span>
-                                                    <span class="text">Terima</span>
+                                                    <span class="text">Edit</span>
                                                 </a>
-                                                <br>
-                                                <a href="<?= base_url('Penjual/DaftarPenjualPending/tolak/'.$data->id_penjual) ?>" class="btn btn-danger btn-icon-split btn-sm">
+                                                <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_produk) ?>" class="btn btn-danger btn-icon-split btn-sm">
                                                     <span class="icon text-white-20">
                                                         <i class="fas fa-trash"></i>
                                                     </span>
-                                                    <span class="text">Tolak</span>
+                                                    <span class="text">Delete</span>
                                                 </a>
                                             </td>
                                         </tr>

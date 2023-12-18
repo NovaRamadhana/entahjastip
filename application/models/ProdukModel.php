@@ -13,10 +13,32 @@ class ProdukModel extends CI_Model{
         return $this->db->where('id_penjual', $id)->count_all_results('produk');
     }
 
-    function countStatusProduk($id){
-        // return $this->db    ->select('COUNT() AS jumlah_ready')
-        //                     ->join('status_produk', 'produk.id_status = status_produk.id_status')
-        //                     ->where('penjual.id_penjual = produk.id_penjual');
+    function daftarProduk(){
+        return $this->db->get('produk')->result();
+    }
+
+    function daftarProdukId($id){
+        return $this->db->where('id_penjual', $id)->get('produk')->result();
+    }
+
+    function countStatusProduk(){
+        $query = $this->db  ->select(   
+                                        "(SELECT COUNT(produk.id_produk) FROM produk
+                                        JOIN status_stok ON status_stok.id_stok = produk.id_stok
+                                        WHERE status_stok.nama_status = 'Pre-Order') AS jumlah_preorder,
+                                        (SELECT COUNT(produk.id_produk) FROM produk
+                                        JOIN status_stok ON status_stok.id_stok = produk.id_stok
+                                        WHERE status_stok.nama_status = 'Ready') AS jumlah_ready,
+                                        (SELECT COUNT(produk.id_produk) FROM produk
+                                        JOIN status_stok ON status_stok.id_stok = produk.id_stok
+                                        WHERE status_stok.nama_status = 'Sold Out') AS jumlah_soldout
+                                    ")
+                            ->get();
+
+        return $query->row();
+    }
+
+    function countStatusProdukId($id){
         $query = $this->db  ->select(   
                                         "(SELECT COUNT(produk.id_produk) FROM produk
                                         JOIN status_stok ON status_stok.id_stok = produk.id_stok

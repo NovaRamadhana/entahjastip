@@ -350,4 +350,6 @@
     <!-- Page level custom scripts -->
     <script src="<?= base_url('assets/js/demo/chart-area-demo.js'); ?>"></script>
     <script src="<?= base_url('assets/js/demo/chart-pie-demo.js'); ?>"></script>
+
+    <script src="https://kit.fontawesome.com/05aa69f7a4.js" crossorigin="anonymous"></script>
 </body>
