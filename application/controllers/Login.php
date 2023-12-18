@@ -34,6 +34,7 @@ class Login extends CI_Controller{
                         'penjual' => $isPenjual,
                         'id_user' => $result->row()->id_user,
                         'nama' => $result->row()->username,
+                        'email' => $result->row()->email,
                     ];
                     
                     if ($userData['penjual']){

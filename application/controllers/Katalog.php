@@ -5,12 +5,13 @@ class Katalog extends CI_Controller{
     function __construct(){
         parent::__construct();
         $this->load->model('KatalogModel');
-        // $this->load->library('session');
+        $this->load->library('session');
     }
 
     function index(){
         $data['judul'] = 'Katalog';
         $data['produk'] = $this->KatalogModel->getKatalog();
+        $data['userlogin'] = $this->session->userdata('logged_in');
         $this->load->view('katalog_v', $data);
     }
 }

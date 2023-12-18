@@ -10,10 +10,18 @@ class Contact extends CI_Controller{
     }
 
     function index(){
+        $email = null;
+        $logged_in = $this->session->userdata('logged_in');
+    
+        if(isset($logged_in['email'])) {
+            $email = $logged_in['email'];
+        };
+
         $data = [
             'judul' => 'Contact',
             'kategori' => $this->Navbar->getCategories(),
-            'email' => $this->session->userdata('logged_in')['email'],
+            'email' => $email,
+            'userlogin' => $logged_in,
         ];
         $this->load->view('contact_v', $data);
     }

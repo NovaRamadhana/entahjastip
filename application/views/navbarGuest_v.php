@@ -7,7 +7,7 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Profil') ?>">About</a></li>
-		<li class="nav-item"><a class="nav-link" href="<?= base_url('Katalog') ?>">Katalog</a></li>
+		        <li class="nav-item"><a class="nav-link" href="<?= base_url('Katalog') ?>">Katalog</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Request') ?>">Requests</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Category</a>
