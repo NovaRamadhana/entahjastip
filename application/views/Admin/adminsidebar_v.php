@@ -166,7 +166,7 @@
 </li>
 
 <li class="nav-item">
-    <a class="nav-link" href="tables.html">
+    <a class="nav-link" href="<?= base_url('Login/logout') ?>">
         <i class="fa-sharp fa-solid fa-door-open"></i>
         <span>Log Out</span>
     </a>
