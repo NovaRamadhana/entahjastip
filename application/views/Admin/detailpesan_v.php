@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Daftar Belanja</title>
+    <title><?= $judul ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
@@ -25,9 +25,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <?php $this->load->view('Admin/adminsidebar_v');
-                $logged_in = $this->session->userdata('logged_in');
-        ?>
+        <?php $this->load->view('Admin/adminsidebar_v'); ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -244,52 +242,42 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading
+                    <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800"></h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p> -->
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
 
                     <?= $this->session->flashdata('msg');?>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Daftar Belanjamu~</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Produk Id Pesanan <?= $detail_belanja[0]->id_pesanan ?></h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr class="align-middle" >
-                                            <th>ID Pesanan</th>
-                                            <?= isset($logged_in['admin']) ? '<th>ID User</th>' : '' ?>
-                                            <th>Alamat Antar</th>
-                                            <th>Tanggal Pemesanan</th>
+                                            <th>Nama Produk</th>
+                                            <th>Jumlah</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID Pesanan</th>
-                                            <?= isset($logged_in['admin']) ? '<th>ID User</th>' : '' ?>
-                                            <th>Alamat Antar</th>
-                                            <th>Tanggal Pemesanan</th>
+                                            <th>Nama Produk</th>
+                                            <th>Jumlah</th>
+                                            <th>Aksi</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($belanja as $data){ ?>
+                                        <?php foreach ($detail_belanja as $data){ ?>
                                         <tr>
-                                            <td><?php echo $data->id_pesanan ?></td>
-                                            <?= isset($logged_in['admin']) ? '<td>'.$data->id_user.'</td>' : '' ?>
-                                            <td><?php echo $data->alamat_antar ?></td>
-                                            <td><?php echo $data->tanggal_pemesanan ?></td>
+                                            <td><?php echo $data->nama_produk ?></td>
+                                            <td><?php echo $data->jumlah ?></td>
                                             <td class="" >
-                                                <a href="<?= base_url('Admin/Daftarbelanja/detailpesan/'.$data->id_pesanan) ?>" class="btn btn-primary btn-icon-split btn-sm">
-                                                    <span class="icon text-white-20">
-                                                        <i class="fas fa-search"></i>
-                                                    </span>
-                                                    <span class="text">Rincian</span>
-                                                </a>
                                                 <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_pesanan) ?>" class="btn btn-warning btn-icon-split btn-sm">
                                                     <span class="icon text-white-20">
                                                         <i class="fas fa-edit"></i>

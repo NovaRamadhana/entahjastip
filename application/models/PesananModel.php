@@ -22,6 +22,23 @@ class PesananModel extends CI_Model{
         return $query->row();
     }
 
+    function getPesanan(){
+        $query = $this->db->get('pesanan');
+
+        return $query->result();
+    }
+
+    function getPesananId($id){
+        $query = $this->db->where('id_user', $id)->get('pesanan');
+
+        return $query->result();
+    }
+
+    function getDetailPesanan($id){
+        return $this->db    ->join('produk', 'produk.id_produk = detail_pesanan.id_produk')
+                            ->where('id_pesanan', $id)->get('detail_pesanan')->result();
+    }
+
     function hitungPesanankePenjualId($id){
         $query = $this->db  ->select('SUM(detail_pesanan.jumlah) as total_pesanan, SUM(detail_pesanan.jumlah*produk.harga) as pendapatan_kotor,')
                             ->from('penjual')

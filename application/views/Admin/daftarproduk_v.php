@@ -242,18 +242,18 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
+                    <!-- Page Heading
                     <h1 class="h3 mb-2 text-gray-800"></h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                            href="https://datatables.net">official DataTables documentation</a>.</p> -->
 
                     <?= $this->session->flashdata('msg');?>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Daftar Akun Penjual</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Daftar Produk Anda</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -291,7 +291,7 @@
                                             <td><?php echo $data->nama_produk ?></td>
                                             <td><?php echo $data->harga ?></td>
                                             <td><?php echo $data->deskripsi ?></td>
-                                            <td><?php echo $data->img ?></td>
+                                            <td><img src="../assets/img/katalog/<?= $data->img ?>" style="width: 16rem;" alt=""></td>
                                             <td class="" >
                                                 <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_produk) ?>" class="btn btn-warning btn-icon-split btn-sm">
                                                     <span class="icon text-white-20">

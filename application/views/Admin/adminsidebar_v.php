@@ -69,17 +69,24 @@
     Produk
 </div>
 <li class="nav-item">
-    <a class="nav-link" href="<?= base_url('Admin/Profilakun'); ?>">
+    <a class="nav-link" href="<?= base_url('Admin/Daftarproduk'); ?>">
+        <!-- <i class="fas fa-fw fa-light fa-card-shopping"></i> -->
+        <i class="fa-solid fa-fw fa-seedling"></i>
+        <span>Daftar Produk</span>
+    </a>
+</li>
+
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+<div class="sidebar-heading">
+    Belanjaan
+</div>
+<li class="nav-item">
+    <a class="nav-link" href="<?= base_url('Admin/Daftarbelanja'); ?>">
         <!-- <i class="fas fa-fw fa-light fa-card-shopping"></i> -->
         <i class="fa-solid fa-fw fa-cart-shopping"></i>
         <span>Daftar Belanja</span>
-    </a>
-</li>
-<li class="nav-item">
-    <a class="nav-link" href="<?= base_url('Admin/Daftarproduk'); ?>">
-        <!-- <i class="fas fa-fw fa-light fa-card-shopping"></i> -->
-        <i class="fa-solid fa-fw fa-cart-shopping"></i>
-        <span>Daftar Produk</span>
     </a>
 </li>
 
