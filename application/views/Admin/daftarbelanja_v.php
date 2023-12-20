@@ -266,7 +266,10 @@
                                             <?= isset($logged_in['admin']) ? '<th>ID User</th>' : '' ?>
                                             <th>Alamat Antar</th>
                                             <th>Tanggal Pemesanan</th>
+<<<<<<< HEAD
                                             <th>Biaya</th>
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -275,7 +278,10 @@
                                             <?= isset($logged_in['admin']) ? '<th>ID User</th>' : '' ?>
                                             <th>Alamat Antar</th>
                                             <th>Tanggal Pemesanan</th>
+<<<<<<< HEAD
                                             <th>Biaya</th>
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -285,7 +291,10 @@
                                             <?= isset($logged_in['admin']) ? '<td>'.$data->id_user.'</td>' : '' ?>
                                             <td><?php echo $data->alamat_antar ?></td>
                                             <td><?php echo $data->tanggal_pemesanan ?></td>
+<<<<<<< HEAD
                                             <td><?= formatangka($data->pengeluaran_pesanan) ?></td>
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                             <td class="" >
                                                 <a href="<?= base_url('Admin/Daftarbelanja/detailpesan/'.$data->id_pesanan) ?>" class="btn btn-primary btn-icon-split btn-sm">
                                                     <span class="icon text-white-20">
@@ -293,18 +302,30 @@
                                                     </span>
                                                     <span class="text">Rincian</span>
                                                 </a>
+<<<<<<< HEAD
                                                 <!-- <a href="<?//= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_pesanan) ?>" class="btn btn-warning btn-icon-split btn-sm">
+=======
+                                                <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_pesanan) ?>" class="btn btn-warning btn-icon-split btn-sm">
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                                     <span class="icon text-white-20">
                                                         <i class="fas fa-edit"></i>
                                                     </span>
                                                     <span class="text">Edit</span>
                                                 </a>
+<<<<<<< HEAD
                                                 <a href="<?//= base_url('Penjual/DaftarBelanja/hapus/'.$data->id_pesanan) ?>" class="btn btn-danger btn-icon-split btn-sm">
+=======
+                                                <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_pesanan) ?>" class="btn btn-danger btn-icon-split btn-sm">
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                                     <span class="icon text-white-20">
                                                         <i class="fas fa-trash"></i>
                                                     </span>
                                                     <span class="text">Delete</span>
+<<<<<<< HEAD
                                                 </a> -->
+=======
+                                                </a>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                             </td>
                                         </tr>
                                         <?php }; ?>

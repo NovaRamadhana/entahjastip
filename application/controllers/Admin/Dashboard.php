@@ -19,7 +19,11 @@ class Dashboard extends CI_Controller{
                     'penjual_diterima' => $this->PenjualModel->countPenjualDiterima(),
                     'pending_penjual' => $this->PenjualModel->countPenjualPending(),
                     'pesanan_masuk' => $this->PesananModel->hitungPesanankePenjual()->total_pesanan,
+<<<<<<< HEAD
                     'pendapatan_kotor' => $this->PesananModel->hitungPendapatanKotor()->pendapatan_kotor,
+=======
+                    'pendapatan_kotor' => $this->PesananModel->hitungPesanankePenjual()->pendapatan_kotor,
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                     'produk_ready' => $this->ProdukModel->countStatusProduk()->jumlah_ready,
                     'produk_preorder' => $this->ProdukModel->countStatusProduk()->jumlah_preorder,
                     'produk_soldout' => $this->ProdukModel->countStatusProduk()->jumlah_soldout,
@@ -36,16 +40,23 @@ class Dashboard extends CI_Controller{
                     'produk_preorder' => $this->ProdukModel->countStatusProdukId($logged_in['id_penjual'])->jumlah_preorder,
                     'produk_soldout' => $this->ProdukModel->countStatusProdukId($logged_in['id_penjual'])->jumlah_soldout,
                     'jumlah_produk' => $this->ProdukModel->countProdukId($logged_in['id_penjual']),
+<<<<<<< HEAD
                     'total_pengeluaran' => $this->PesananModel->hitungPengeluaranId($logged_in['id_user'])->pengeluaran,
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                     'total_pesanan' => $this->PesananModel->countPesananId($logged_in['id_user']),
                     'total_transaksi' => $this->TransaksiModel->countTransaksiId($logged_in['id_user']),
                 ];
             } else {
                 $data = [
                     'status' => 'Pengguna',
+<<<<<<< HEAD
                     'total_pengeluaran' => $this->PesananModel->hitungPengeluaranId($logged_in['id_user'])->pengeluaran,
                     'total_pesanan' => $this->PesananModel->countPesananId($logged_in['id_user']),
                     'total_transaksi' => $this->TransaksiModel->countTransaksiId($logged_in['id_user']),
+=======
+                    'total_pesanan' => $this->PesananModel->countPesananId($logged_in['id_user'])
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                 ];
             }
             $data['logged_in']  = $logged_in;

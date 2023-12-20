@@ -15,7 +15,11 @@ class Daftarproduk extends CI_Controller{
                     'produk' => $this->ProdukModel->daftarProduk(),
                 ];
             }
+<<<<<<< HEAD
             else if ($logged_in['penjual']){
+=======
+            else if (isset($logged_in['penjual'])){
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                 $data = [
                     'produk' => $this->ProdukModel->daftarProdukId($logged_in['id_penjual']),
                 ];

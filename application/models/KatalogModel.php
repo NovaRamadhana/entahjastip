@@ -9,6 +9,7 @@ class KatalogModel extends CI_Model{
         $query = $this->db->get('produk');
         return $query->result();
     }
+<<<<<<< HEAD
     
     public function find($id){
         $result =$this ->db->where('id_produk', $id)
@@ -22,4 +23,6 @@ class KatalogModel extends CI_Model{
         }
     }
     
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
 }

@@ -76,9 +76,15 @@ class Login extends CI_Controller{
                     $userData = [
                         'login' => true,
                         'admin' => true,
+<<<<<<< HEAD
                         'username_admin' => $result->row()->username_admin,
                         'nama' => $result->row()->nama,
                         'email' => $result->row()->email
+=======
+                        'username_admin' => $result->username_admin,
+                        'nama' => $result->nama,
+                        'email' => $result->email
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                     ];
                     $this->session->set_userdata('logged_in', $userData);
                     redirect(base_url());
@@ -97,11 +103,14 @@ class Login extends CI_Controller{
     }
 
     function logout(){
+<<<<<<< HEAD
         $logged_in = $this->session->userdata('logged_in');
         if (isset($logged_in['user'])){
             $user_id = $logged_in['id_user'];
             $this->db->query("UPDATE pengguna SET last_login = NOW() WHERE id_user = '$user_id'");
         }
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
         $this->session->unset_userdata('logged_in');
         redirect(base_url());
     }

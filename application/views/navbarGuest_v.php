@@ -7,7 +7,11 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link" href="<?= base_url() ?>">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Profil') ?>">About</a></li>
+<<<<<<< HEAD
 		        <!--<li class="nav-item"><a class="nav-link" href="<?= base_url('Katalog') ?>">Katalog</a></li>-->
+=======
+		        <li class="nav-item"><a class="nav-link" href="<?= base_url('Katalog') ?>">Katalog</a></li>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Request') ?>">Requests</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Category</a>
@@ -19,6 +23,7 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="<?= base_url('Contact') ?>">Contact</a></li>
 		        <?php if(isset($userlogin)) { ?>
+<<<<<<< HEAD
 		            <li class="nav-item"><a class="nav-link" href="<?= base_url('Katalog') ?>">Katalog</a></li>
 		            <li class="nav-item"><a1 class="nav-link" style="color: black;"><?php $keranjang = 'Cart : '.$this->cart->total_items().' items'?>
                      <?php echo anchor('Katalog/detail_keranjang',$keranjang)?> </a1>
@@ -26,6 +31,10 @@
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Login/logout') ?>">Logout</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Admin/Dashboard') ?>">Admin</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Akun') ?>">Akun</a></li>
+=======
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Login/logout') ?>">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= base_url('Admin/Dashboard') ?>">Admin</a></li>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                 <?php } else { ?>
                     <li class="nav-item"><a class="nav-link" href="<?= base_url('Login') ?>">Login</a></li>
                 <?php } ?>      

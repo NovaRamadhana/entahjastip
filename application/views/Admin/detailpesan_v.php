@@ -244,7 +244,13 @@
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800"></h1>
+<<<<<<< HEAD
                     
+=======
+                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+                        For more information about DataTables, please visit the <a target="_blank"
+                            href="https://datatables.net">official DataTables documentation</a>.</p>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
 
                     <?= $this->session->flashdata('msg');?>
 
@@ -260,16 +266,24 @@
                                         <tr class="align-middle" >
                                             <th>Nama Produk</th>
                                             <th>Jumlah</th>
+<<<<<<< HEAD
                                             <th>Harga</th>
                                             <!-- <th>Aksi</th> -->
+=======
+                                            <th>Aksi</th>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>Nama Produk</th>
                                             <th>Jumlah</th>
+<<<<<<< HEAD
                                             <th>Harga</th>
                                             <!-- <th>Aksi</th> -->
+=======
+                                            <th>Aksi</th>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -277,8 +291,12 @@
                                         <tr>
                                             <td><?php echo $data->nama_produk ?></td>
                                             <td><?php echo $data->jumlah ?></td>
+<<<<<<< HEAD
                                             <td><?= $data->pengeluaran_detailpesanan ?></td>
                                             <!-- <td class="" >
+=======
+                                            <td class="" >
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                                 <a href="<?= base_url('Penjual/DaftarPenjualDiterima/tolak/'.$data->id_pesanan) ?>" class="btn btn-warning btn-icon-split btn-sm">
                                                     <span class="icon text-white-20">
                                                         <i class="fas fa-edit"></i>
@@ -291,7 +309,11 @@
                                                     </span>
                                                     <span class="text">Delete</span>
                                                 </a>
+<<<<<<< HEAD
                                             </td> -->
+=======
+                                            </td>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                                         </tr>
                                         <?php }; ?>
                                     <tbody>

@@ -39,6 +39,7 @@ class Daftarbelanja extends CI_Controller{
             $this->load->view('Admin/detailpesan_v.php', $data);
         } else redirect(base_url());
     }
+<<<<<<< HEAD
 
     function hapus($id){
         $result = $this->PesananModel->delete($id);
@@ -56,4 +57,6 @@ class Daftarbelanja extends CI_Controller{
         }
         redirect(base_url('Penjual/Daftarbelanja'));
     }
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
 }

@@ -14,6 +14,7 @@ class Katalog extends CI_Controller{
         $data['userlogin'] = $this->session->userdata('logged_in');
         $this->load->view('katalog_v', $data);
     }
+<<<<<<< HEAD
     
     function checkout()
     {
@@ -46,4 +47,6 @@ class Katalog extends CI_Controller{
 
     }
 
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
 }

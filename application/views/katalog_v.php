@@ -44,13 +44,21 @@
             <div class="container py-5">
                 <div class="row text-center">
                     <?php foreach ($produk as $data) : ?>
+<<<<<<< HEAD
                         <div class="card mx-2 mb-3" style="width: 16rem;">
+=======
+                        <div class="card mb-5" style="width: 16rem;">
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                             <img src="<?php echo base_url().'/assets/img/katalog/'.$data->img ?>" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $data->nama_produk ?></h5>
                                 <small><?php echo $data->deskripsi ?></small><br>
                                 <span class="badge text-bg-warning">Rp. <?php echo $data->harga ?></span><br><br>
+<<<<<<< HEAD
                                 <?php echo anchor ('Katalog/tambah_keranjang/' .$data->id_produk,'<div class="btn btn-primary">Add To Cart</div>')?>
+=======
+                                <a href="#" class="btn btn-primary">Add To Cart</a>
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
                             </div>
                         </div>
                     <?php endforeach; ?>

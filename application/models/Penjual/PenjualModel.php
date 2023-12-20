@@ -31,6 +31,11 @@ class PenjualModel extends CI_Model{
                             ->get('penjual')->row();
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
     function updateAjuan($id, $status){
         $this->db->update('penjual', $status, array('id_penjual' => $id));
         return $this->db->affected_rows();
@@ -44,6 +49,7 @@ class PenjualModel extends CI_Model{
         return $this->db->where('status_ajuan', 'Diterima')->get('penjual')->num_rows();
     }
 
+<<<<<<< HEAD
     function cekDaftar($id){
         $query = $this->db  ->where('id_user', $id)
                             ->get('penjual');
@@ -70,6 +76,8 @@ class PenjualModel extends CI_Model{
         $this->db->insert('penjual', $data);
     }
 
+=======
+>>>>>>> 89945f3206e0d30d9d9157ce105a90fa40368a8a
     function delete($id){
         $this->db->delete('penjual', array('id_penjual' => $id));
         return $this->db->affected_rows();
