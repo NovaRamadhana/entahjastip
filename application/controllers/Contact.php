@@ -6,11 +6,23 @@ class Contact extends CI_Controller{
         parent::__construct();
         $this->load->model('Navbar');
         $this->load->model('ContactModel');
+        $this->load->library('session');
     }
 
     function index(){
-        $data['judul'] = 'Contact';
-        $data['kategori'] = $this->Navbar->getCategories();
+        $email = null;
+        $logged_in = $this->session->userdata('logged_in');
+    
+        if(isset($logged_in['email'])) {
+            $email = $logged_in['email'];
+        };
+
+        $data = [
+            'judul' => 'Contact',
+            'kategori' => $this->Navbar->getCategories(),
+            'email' => $email,
+            'userlogin' => $logged_in,
+        ];
         $this->load->view('contact_v', $data);
     }
 
